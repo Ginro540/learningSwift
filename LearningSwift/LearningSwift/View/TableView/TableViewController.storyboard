@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6BG-wn-gbU">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="CO3-3a-eIO">
+            <objects>
+                <navigationController id="6BG-wn-gbU" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="chevron.backward" catalog="system" id="lgr-Im-lIY">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vfs-bK-BUF" kind="relationship" relationship="rootViewController" id="ZBQ-xn-GII"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tb3-Dm-CQn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2129" y="-130"/>
+        </scene>
+        <!--検索一覧-->
+        <scene sceneID="yBL-5a-Lch">
+            <objects>
+                <viewController id="vfs-bK-BUF" customClass="TableViewController" customModule="LearningSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ol5-xO-IbF">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="9TO-OW-YT1">
+                                <rect key="frame" x="0.0" y="103" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vfs-bK-BUF" id="J9F-ew-FHx"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="epv-vi-KbI">
+                                <rect key="frame" x="0.0" y="169" width="393" height="683"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7AU-zm-dzt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="epv-vi-KbI" secondAttribute="bottom" id="4D6-Cc-EBh"/>
+                            <constraint firstItem="9TO-OW-YT1" firstAttribute="leading" secondItem="7AU-zm-dzt" secondAttribute="leading" id="8Du-rH-58n"/>
+                            <constraint firstItem="epv-vi-KbI" firstAttribute="top" secondItem="9TO-OW-YT1" secondAttribute="bottom" constant="10" id="Egv-gs-b7i"/>
+                            <constraint firstItem="9TO-OW-YT1" firstAttribute="top" secondItem="7AU-zm-dzt" secondAttribute="top" id="IEX-j1-HHE"/>
+                            <constraint firstItem="epv-vi-KbI" firstAttribute="trailing" secondItem="7AU-zm-dzt" secondAttribute="trailing" id="MjV-10-gNE"/>
+                            <constraint firstItem="epv-vi-KbI" firstAttribute="leading" secondItem="7AU-zm-dzt" secondAttribute="leading" id="dpG-8k-pUn"/>
+                            <constraint firstItem="9TO-OW-YT1" firstAttribute="trailing" secondItem="7AU-zm-dzt" secondAttribute="trailing" id="xMR-gR-B4l"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="検索一覧" largeTitleDisplayMode="never" id="nBx-0W-U7Q"/>
+                    <connections>
+                        <outlet property="searchBar" destination="9TO-OW-YT1" id="6MY-Et-IEf"/>
+                        <outlet property="tableView" destination="epv-vi-KbI" id="Diy-v2-P6E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wkx-2h-tVK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1312.2137404580153" y="-130.28169014084509"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
