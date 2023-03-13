@@ -43,6 +43,10 @@
                                 <rect key="frame" x="0.0" y="169" width="393" height="683"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" id="GKr-9W-eg9">
+                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7AU-zm-dzt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -56,8 +60,9 @@
                             <constraint firstItem="9TO-OW-YT1" firstAttribute="trailing" secondItem="7AU-zm-dzt" secondAttribute="trailing" id="xMR-gR-B4l"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="検索一覧" largeTitleDisplayMode="never" id="nBx-0W-U7Q"/>
+                    <navigationItem key="navigationItem" title="検索一覧" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="never" id="nBx-0W-U7Q"/>
                     <connections>
+                        <outlet property="indicatorView" destination="GKr-9W-eg9" id="7tw-0f-Nbz"/>
                         <outlet property="searchBar" destination="9TO-OW-YT1" id="6MY-Et-IEf"/>
                         <outlet property="tableView" destination="epv-vi-KbI" id="Diy-v2-P6E"/>
                     </connections>

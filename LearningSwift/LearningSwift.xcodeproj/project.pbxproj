@@ -28,6 +28,8 @@
 		A4E3EF6829AB91D000DCC705 /* APIClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E3EF6729AB91D000DCC705 /* APIClientError.swift */; };
 		A4E3EF6F29ABBA7800DCC705 /* GitHubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E3EF6E29ABBA7800DCC705 /* GitHubCell.swift */; };
 		A4E3EF7229ABC06500DCC705 /* GitHubCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4E3EF7129ABC06500DCC705 /* GitHubCell.xib */; };
+		A4E3EFCF29BA488700DCC705 /* GitHubDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4E3EFCE29BA488700DCC705 /* GitHubDetail.storyboard */; };
+		A4E3EFD229BDF4B900DCC705 /* GitHubDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E3EFD129BDF4B900DCC705 /* GitHubDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		A4E3EF6729AB91D000DCC705 /* APIClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientError.swift; sourceTree = "<group>"; };
 		A4E3EF6E29ABBA7800DCC705 /* GitHubCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubCell.swift; sourceTree = "<group>"; };
 		A4E3EF7129ABC06500DCC705 /* GitHubCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GitHubCell.xib; sourceTree = "<group>"; };
+		A4E3EFCE29BA488700DCC705 /* GitHubDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GitHubDetail.storyboard; sourceTree = "<group>"; };
+		A4E3EFD129BDF4B900DCC705 /* GitHubDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +204,7 @@
 		A4E3EF5E29A799EB00DCC705 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A4E3EFCC29BA477E00DCC705 /* TableViewDeteil */,
 				A4E3EF5729A7639400DCC705 /* TableView */,
 				A41485B829A72D020050D79E /* TopView */,
 				A4AD127829A67F8000CAEBBC /* LoginView */,
@@ -232,6 +237,23 @@
 				A4E3EF7129ABC06500DCC705 /* GitHubCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		A4E3EFCC29BA477E00DCC705 /* TableViewDeteil */ = {
+			isa = PBXGroup;
+			children = (
+				A4E3EFCD29BA47AA00DCC705 /* GithubDetailView */,
+			);
+			path = TableViewDeteil;
+			sourceTree = "<group>";
+		};
+		A4E3EFCD29BA47AA00DCC705 /* GithubDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				A4E3EFCE29BA488700DCC705 /* GitHubDetail.storyboard */,
+				A4E3EFD129BDF4B900DCC705 /* GitHubDetailView.swift */,
+			);
+			path = GithubDetailView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,6 +370,7 @@
 				A4E3EF7229ABC06500DCC705 /* GitHubCell.xib in Resources */,
 				A4AD124F29A67CD500CAEBBC /* LaunchScreen.storyboard in Resources */,
 				A41485BB29A72D240050D79E /* TopViewController.storyboard in Resources */,
+				A4E3EFCF29BA488700DCC705 /* GitHubDetail.storyboard in Resources */,
 				A4E3EF5929A763B200DCC705 /* TableViewController.storyboard in Resources */,
 				A4AD124C29A67CD500CAEBBC /* Assets.xcassets in Resources */,
 				A4AD128829A68D9900CAEBBC /* LoginView.storyboard in Resources */,
@@ -381,6 +404,7 @@
 				A4AD124029A67CD500CAEBBC /* AppDelegate.swift in Sources */,
 				A4E3EF6329A79DEA00DCC705 /* GitHubSearchResult.swift in Sources */,
 				A4AD124229A67CD500CAEBBC /* SceneDelegate.swift in Sources */,
+				A4E3EFD229BDF4B900DCC705 /* GitHubDetailView.swift in Sources */,
 				A4AD128A29A68DBA00CAEBBC /* LoginViewController.swift in Sources */,
 				A4E3EF6F29ABBA7800DCC705 /* GitHubCell.swift in Sources */,
 				A4AD124A29A67CD500CAEBBC /* LearningSwift.xcdatamodeld in Sources */,

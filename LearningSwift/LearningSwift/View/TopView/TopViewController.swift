@@ -23,9 +23,6 @@ class TopViewConroller: UIViewController {
         let storyboad = UIStoryboard(name: R.storyboard.tableViewController.name, bundle: nil).instantiateInitialViewController() as! UINavigationController
         storyboad.modalPresentationStyle = .fullScreen
         self.present(storyboad, animated: true)
-        
-        
-        
     }
     
     @IBAction func collectionViewAction(_ sender: Any) {

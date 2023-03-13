@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 
 class ViewController: UIViewController {
-
+    
     
     @IBOutlet weak var textField: UITextField!
     
@@ -22,14 +22,17 @@ class ViewController: UIViewController {
         testMap()
         methodChain()
         testSubject()
+        combineLatest()
+        combineLatestaa()
+        zip()
         // Do any additional setup after loading the view.
     }
-
-
-//    extension ObservableType {
-//        public func filter(_ predicate: @escaping (Self.E) throws -> Bool)-> RxSwift.Observable<Self.E>
-//    }
-
+    
+    
+    //    extension ObservableType {
+    //        public func filter(_ predicate: @escaping (Self.E) throws -> Bool)-> RxSwift.Observable<Self.E>
+    //    }
+    
     func testFilter(){
         
         print("##########  testFilter  ########")
@@ -88,7 +91,7 @@ class ViewController: UIViewController {
             })
         
         print("##########  methodChainその３  ########")
-
+        
         _ = Observable.just(10)
             .map{ (arg: Int) -> String in
                 return "value: \(arg)"
@@ -98,7 +101,7 @@ class ViewController: UIViewController {
             })
     }
     
-
+    
     func testSubject(){
         
         print("##########  testSubject  ########")
@@ -115,6 +118,82 @@ class ViewController: UIViewController {
     
     
     
+    func combineLatest(){
+        print("##########  combineLatest  ########")
+        let password = PublishSubject<String>()
+        let repeatedPassword = PublishSubject<String>()
+        _ = Observable.combineLatest(password, repeatedPassword) { "\($0), \($1)"}
+              .subscribe(onNext: { print("onNext: ", $0) })
+        
+        
+        password.onNext("a")
+        password.onNext("ab")
+        repeatedPassword.onNext("A")
+        repeatedPassword.onNext("AB")
+        repeatedPassword.onNext("ABC")
+        
+        
+    }
+    
+    func combineLatestaa(){
+        print("##########  combineLatestaa  ########")
+        let password = PublishSubject<String>()
+        let repeatedPassword = PublishSubject<String>()
+        _ = Observable.combineLatest(password, repeatedPassword) { "\($0), \($1)"}
+              .subscribe(onNext: { print("onNext: ", $0) })
+        
+        repeatedPassword.onNext("A")
+        repeatedPassword.onNext("AB")
+        repeatedPassword.onNext("ABC")
+        password.onNext("a")
+        password.onNext("ab")
+    }
+    
+    func zip(){
+        print("##########  zip  ########")
+        let intSubject = PublishSubject<Int>()
+        let stringSubject = PublishSubject<String>()
+        
+        _ = Observable.zip(intSubject, stringSubject) {
+                "\($0) \($1)"
+            }
+            .subscribe(onNext: { print($0) })
+        intSubject.onNext(1)
+        intSubject.onNext(2)
+        stringSubject.onNext("A")
+        stringSubject.onNext("B")
+        stringSubject.onNext("C")
+        stringSubject.onNext("D")
+        intSubject.onNext(3)
+        intSubject.onNext(4)
+    }
+    
+    public enum TestError: Error {
+        case test
+    }
+    
+    
+    
+    
+    
+    
+    func errors(){
+        let sequenceThatErrors = Observable<String>.create { observer in
+            
+            observer.onNext("A")
+            observer.onError(TestError.test)
+            observer.onNext("B")
+            return Disposables.create(){
+                print("Dispose Action:")
+            }
+            
+        }
+        
+        
+        
+        
+        
+    }
     
     
 }

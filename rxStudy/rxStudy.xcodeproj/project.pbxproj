@@ -21,6 +21,12 @@
 		A4E3EFB629B257EE00DCC705 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A4E3EFB529B257EE00DCC705 /* RxCocoa */; };
 		A4E3EFB829B257EE00DCC705 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = A4E3EFB729B257EE00DCC705 /* RxRelay */; };
 		A4E3EFBA29B257EE00DCC705 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A4E3EFB929B257EE00DCC705 /* RxSwift */; };
+		A4E3EFBF29B3770A00DCC705 /* GitHubSignup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4E3EFBE29B3770A00DCC705 /* GitHubSignup.storyboard */; };
+		A4E3EFC129B378A600DCC705 /* GitHubSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E3EFC029B378A600DCC705 /* GitHubSignupViewController.swift */; };
+		A4E3EFC329B37B5400DCC705 /* BindingExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E3EFC229B37B5400DCC705 /* BindingExtensions.swift */; };
+		A4E3EFC529B3B98D00DCC705 /* GithubSignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E3EFC429B3B98D00DCC705 /* GithubSignupViewModel.swift */; };
+		A4E3EFC829B3BD1E00DCC705 /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E3EFC729B3BD1E00DCC705 /* GitHubAPI.swift */; };
+		A4E3EFCB29B4BA1500DCC705 /* Wireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E3EFCA29B4BA1500DCC705 /* Wireframe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +61,12 @@
 		A4E3EF9F29B257C400DCC705 /* rxStudyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rxStudyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E3EFA329B257C400DCC705 /* rxStudyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rxStudyUITests.swift; sourceTree = "<group>"; };
 		A4E3EFA529B257C400DCC705 /* rxStudyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rxStudyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A4E3EFBE29B3770A00DCC705 /* GitHubSignup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GitHubSignup.storyboard; sourceTree = "<group>"; };
+		A4E3EFC029B378A600DCC705 /* GitHubSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubSignupViewController.swift; sourceTree = "<group>"; };
+		A4E3EFC229B37B5400DCC705 /* BindingExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingExtensions.swift; sourceTree = "<group>"; };
+		A4E3EFC429B3B98D00DCC705 /* GithubSignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSignupViewModel.swift; sourceTree = "<group>"; };
+		A4E3EFC729B3BD1E00DCC705 /* GitHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPI.swift; sourceTree = "<group>"; };
+		A4E3EFCA29B4BA1500DCC705 /* Wireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wireframe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +121,10 @@
 		A4E3EF7E29B257C300DCC705 /* rxStudy */ = {
 			isa = PBXGroup;
 			children = (
+				A4E3EFD529BE199700DCC705 /* WikipediaView */,
+				A4E3EFC929B4B9DF00DCC705 /* Service */,
+				A4E3EFC629B3BCF500DCC705 /* Protocols */,
+				A4E3EFBD29B376CB00DCC705 /* Sign-In */,
 				A4E3EF7F29B257C300DCC705 /* AppDelegate.swift */,
 				A4E3EF8129B257C300DCC705 /* SceneDelegate.swift */,
 				A4E3EF8329B257C300DCC705 /* ViewController.swift */,
@@ -136,6 +152,40 @@
 				A4E3EFA529B257C400DCC705 /* rxStudyUITestsLaunchTests.swift */,
 			);
 			path = rxStudyUITests;
+			sourceTree = "<group>";
+		};
+		A4E3EFBD29B376CB00DCC705 /* Sign-In */ = {
+			isa = PBXGroup;
+			children = (
+				A4E3EFBE29B3770A00DCC705 /* GitHubSignup.storyboard */,
+				A4E3EFC029B378A600DCC705 /* GitHubSignupViewController.swift */,
+				A4E3EFC229B37B5400DCC705 /* BindingExtensions.swift */,
+				A4E3EFC429B3B98D00DCC705 /* GithubSignupViewModel.swift */,
+			);
+			path = "Sign-In";
+			sourceTree = "<group>";
+		};
+		A4E3EFC629B3BCF500DCC705 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A4E3EFC729B3BD1E00DCC705 /* GitHubAPI.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A4E3EFC929B4B9DF00DCC705 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				A4E3EFCA29B4BA1500DCC705 /* Wireframe.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		A4E3EFD529BE199700DCC705 /* WikipediaView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = WikipediaView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +304,7 @@
 				A4E3EF8F29B257C300DCC705 /* LaunchScreen.storyboard in Resources */,
 				A4E3EF8C29B257C300DCC705 /* Assets.xcassets in Resources */,
 				A4E3EF8729B257C300DCC705 /* Main.storyboard in Resources */,
+				A4E3EFBF29B3770A00DCC705 /* GitHubSignup.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,9 +330,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4E3EF8429B257C300DCC705 /* ViewController.swift in Sources */,
+				A4E3EFC329B37B5400DCC705 /* BindingExtensions.swift in Sources */,
+				A4E3EFC529B3B98D00DCC705 /* GithubSignupViewModel.swift in Sources */,
 				A4E3EF8029B257C300DCC705 /* AppDelegate.swift in Sources */,
 				A4E3EF8229B257C300DCC705 /* SceneDelegate.swift in Sources */,
+				A4E3EFCB29B4BA1500DCC705 /* Wireframe.swift in Sources */,
+				A4E3EFC129B378A600DCC705 /* GitHubSignupViewController.swift in Sources */,
 				A4E3EF8A29B257C300DCC705 /* rxStudy.xcdatamodeld in Sources */,
+				A4E3EFC829B3BD1E00DCC705 /* GitHubAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
