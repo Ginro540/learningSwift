@@ -10,6 +10,7 @@
 		A41485B729A715400050D79E /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41485B629A715400050D79E /* UITextField.swift */; };
 		A41485BB29A72D240050D79E /* TopViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A41485BA29A72D240050D79E /* TopViewController.storyboard */; };
 		A41485BD29A72D9D0050D79E /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41485BC29A72D9D0050D79E /* TopViewController.swift */; };
+		A46DA72D29C8B6F800923384 /* SampleClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46DA72C29C8B6F800923384 /* SampleClass.swift */; };
 		A4AD124029A67CD500CAEBBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AD123F29A67CD500CAEBBC /* AppDelegate.swift */; };
 		A4AD124229A67CD500CAEBBC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AD124129A67CD500CAEBBC /* SceneDelegate.swift */; };
 		A4AD124A29A67CD500CAEBBC /* LearningSwift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A4AD124829A67CD500CAEBBC /* LearningSwift.xcdatamodeld */; };
@@ -53,6 +54,7 @@
 		A41485B629A715400050D79E /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		A41485BA29A72D240050D79E /* TopViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TopViewController.storyboard; sourceTree = "<group>"; };
 		A41485BC29A72D9D0050D79E /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
+		A46DA72C29C8B6F800923384 /* SampleClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleClass.swift; sourceTree = "<group>"; };
 		A4AD123C29A67CD500CAEBBC /* LearningSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4AD123F29A67CD500CAEBBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4AD124129A67CD500CAEBBC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +123,14 @@
 			path = TopView;
 			sourceTree = "<group>";
 		};
+		A46DA72A29C8B6E000923384 /* llearning */ = {
+			isa = PBXGroup;
+			children = (
+				A46DA72C29C8B6F800923384 /* SampleClass.swift */,
+			);
+			path = llearning;
+			sourceTree = "<group>";
+		};
 		A4AD123329A67CD500CAEBBC = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +155,7 @@
 		A4AD123E29A67CD500CAEBBC /* LearningSwift */ = {
 			isa = PBXGroup;
 			children = (
+				A46DA72A29C8B6E000923384 /* llearning */,
 				A4E3EF6029A79BC600DCC705 /* API */,
 				A4E3EF5E29A799EB00DCC705 /* View */,
 				A41485B529A715170050D79E /* Extensions */,
@@ -350,6 +361,7 @@
 			mainGroup = A4AD123329A67CD500CAEBBC;
 			packageReferences = (
 				A4AD127229A67D0100CAEBBC /* XCRemoteSwiftPackageReference "R.swift" */,
+				A40762A729D11384003E29B0 /* XCRemoteSwiftPackageReference "FirebaseUI-iOS" */,
 			);
 			productRefGroup = A4AD123D29A67CD500CAEBBC /* Products */;
 			projectDirPath = "";
@@ -400,6 +412,7 @@
 			files = (
 				A41485BD29A72D9D0050D79E /* TopViewController.swift in Sources */,
 				A4E3EF6629A7AAFD00DCC705 /* GitHubAPI.swift in Sources */,
+				A46DA72D29C8B6F800923384 /* SampleClass.swift in Sources */,
 				A4E3EF5C29A7644200DCC705 /* TableViewController.swift in Sources */,
 				A4AD124029A67CD500CAEBBC /* AppDelegate.swift in Sources */,
 				A4E3EF6329A79DEA00DCC705 /* GitHubSearchResult.swift in Sources */,
@@ -743,6 +756,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		A40762A729D11384003E29B0 /* XCRemoteSwiftPackageReference "FirebaseUI-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/FirebaseUI-iOS.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.1;
+			};
+		};
 		A4AD127229A67D0100CAEBBC /* XCRemoteSwiftPackageReference "R.swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mac-cain13/R.swift.git";

@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct GitHubAPI<T:Codable> {
+struct GitHubAPI<Response:Codable> {
         
-    func request(with urlString: String) async throws -> T {
+    func request(with urlString: String) async throws -> Response {
         
         guard let url = URL(string: urlString) else {
             throw APIClientError.invalidURL
@@ -22,7 +22,7 @@ struct GitHubAPI<T:Codable> {
             }
             switch httpStatus.statusCode {
             case 200 ..< 400:
-                return try JSONDecoder().decode(T.self, from: data)
+                return try JSONDecoder().decode(Response.self, from: data)
             case 400... :
                 throw APIClientError.badStatus(statusCode:httpStatus.statusCode)
             default:
@@ -33,4 +33,24 @@ struct GitHubAPI<T:Codable> {
             throw APIClientError.serverError(error)
         }
     }
+    
+    
+    func request(with urlString: String ,complete:@escaping(_ response:Response) -> Void) {
+        
+        guard let url = URL(string: urlString) else {
+           return
+        }
+        
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            
+            guard let data = data, response == nil else {
+                return
+            }
+            do {
+                complete(try JSONDecoder().decode(Response.self, from: data))
+            } catch {}
+        }
+        task.resume()
+    }
+    
 }

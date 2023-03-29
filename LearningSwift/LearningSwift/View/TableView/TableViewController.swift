@@ -57,6 +57,11 @@ class TableViewController: UIViewController {
         self.tableView.reloadData()
     }
     
+    func emptyReload(){
+        self.item = nil
+        self.tableView.reloadData()
+    }
+    
 }
 
 extension TableViewController: UITableViewDelegate,UITableViewDataSource {
@@ -92,7 +97,10 @@ extension TableViewController: UISearchBarDelegate {
     // SearchBarで入力を検知
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
-        guard searchText.count >= 0 else {
+        // サーチバーで何も入力されてない場合は処理しない
+        guard searchText.count >= 0,
+        !searchText.isEmpty  else {
+            emptyReload()
             return
         }
         
@@ -102,11 +110,14 @@ extension TableViewController: UISearchBarDelegate {
                 let url = "https://api.github.com/search/repositories?q=\(searchText)&sort=stars&page=0&per_page=0"
                 let response = try await GitHubAPI<SearchTableSectionModel>().request(with: url)
                 await self.reload(item: response)
-                await self.indicatorControl(hiddon: false)
                 print(response)
             } catch {
                 print(error.localizedDescription)
             }
+            await self.indicatorControl(hiddon: false)
         }
+        
+        
+        
     }
 }
